@@ -17,7 +17,7 @@ body {
  :root {
     --White-text: hsl(0, 0%, 100%);
     --Grayish-blue-footer-text: hsl(240, 2%, 79%);
-    --Very-dark-grayish-blue-body: hsl(207, 13%, 34%);
+    --Very-dark-grayish-blue-body: hsl(206, 13%, 34%);
     --Very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
     --Very-light-red: hsl(13, 100%, 72%);
     --Light-red: hsl(353, 100%, 62%);
@@ -26,6 +26,13 @@ body {
     --Light-red-CTA-text: hsl(356, 100%, 66%);
     --Very-light-red-CTA-hover-background: hsl(355, 100%, 74%);
     --Very-dark-blue-headings: hsl(208, 49%, 24%);
+}
+
+
+/* General styles */
+
+.translateZero {
+    transform: translate(0) !important;
 }
 
 h2 {
@@ -58,9 +65,42 @@ p {
     width: 70px;
 }
 
+
+/* NAVBAR */
+
 .main-wrapper .section .hero .navber .aside-left .links {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f9919a;
+    width: 40%;
+    height: 100vh;
+    transition: all .3s linear;
+    transform: translateX(-100%);
 }
+
+.main-wrapper .section .hero .navber .aside-left .links ul {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.main-wrapper .section .hero .navber .aside-left .links ul li {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.main-wrapper .section .hero .navber .aside-left .links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 5px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+
+/* END NAVBAR */
 
 .main-wrapper .section .hero .navber .login,
 .sign-up {
@@ -393,5 +433,22 @@ p {
     .connect>li {
         font-weight: 300;
         color: lightgray;
+    }
+    .main-wrapper .section .hero .navber .aside-left .links {
+        /* display: none; */
+        position: initial;
+        background: none;
+        width: initial;
+        height: initial;
+        transition: none;
+    }
+    .main-wrapper .section .hero .navber .aside-left .links ul {
+        margin-top: initials;
+    }
+    .main-wrapper .section .hero .navber .aside-left .links ul {
+        margin-top: 0;
+    }
+    .main-wrapper .section .hero .navber .aside-left {
+        align-items: center;
     }
 }
